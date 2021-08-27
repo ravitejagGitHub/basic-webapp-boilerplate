@@ -1,0 +1,24 @@
+{
+  "name": "basic-webapp-boilerplate",
+  "version": "1.0.0",
+  "description": "NPM project which include basic html, css, js pre processors or compilers",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run prebuild:scss",
+    "prebuild:scss": "node-sass --watch src/scss/*/** -o build/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravitejagGitHub/basic-webapp-boilerplate.git"
+  },
+  "author": "Raviteja Giduturi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravitejagGitHub/basic-webapp-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ravitejagGitHub/basic-webapp-boilerplate#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

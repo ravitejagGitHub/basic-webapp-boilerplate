@@ -1,0 +1,36 @@
+@import "./typography.scss";
+@import "./theme.scss";
+
+body {
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @include body;
+
+    .header {
+        height: 100px;
+    }
+    .content {
+        display: flex;
+        background-color: var(--secondary-color);
+        flex-grow: 1;
+
+    }
+    .footer {
+        height: 200px;
+        background-color: var(--dark-grey-color);
+    }
+
+    &__name {
+      @include header;
+    }
+
+    &__details {
+        @include sub-header;
+    }
+}

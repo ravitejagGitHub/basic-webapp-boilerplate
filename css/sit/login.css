@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #150f96;
+  --secondary-color: #ffb617;
+  --black-color: #000;
+  --dark-grey-color: #4b4e53; }
+
+body {
+  margin: 0; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .app .header {
+    height: 100px; }
+  .app .content {
+    display: flex;
+    background-color: var(--secondary-color);
+    flex-grow: 1; }
+  .app .footer {
+    height: 200px;
+    background-color: var(--dark-grey-color); }
+  .app__name {
+    font-size: 54px;
+    font-weight: bold; }
+  .app__details {
+    font-size: 24px; }
+
+input[type] {
+  background: grey;
+  height: 30px;
+  padding: 5px; }
