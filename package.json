@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean:build && npm run prebuild:html && npm run prebuild:sit",
     "clean:build": "rm -rf build",
-    "prebuild:html": "node src/prebuild-scripts/html-precompiler.js",
+    "prebuild:html": "node prebuild-scripts/html-precompiler.js",
     "prebuild:sit": "node-sass -r src/**/*.scss -o build/sit/css",
     "prebuild:uat": "node-sass --watch src/**/*.scss -o build/uat/css",
     "test": "echo \"Error: no test specified\" && exit 1"

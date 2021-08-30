@@ -5,7 +5,7 @@ const templateFile = "a2b2c-template.html";
 
 const names = ["login"];
 
-const filePath = path.join(__dirname, "..", templateFile);
+const filePath = path.join(__dirname, "..", "src", templateFile);
 // console.log(filePath);
 
 const templateContent = fs.readFileSync(filePath, {
@@ -16,7 +16,7 @@ const templateContent = fs.readFileSync(filePath, {
 
 names.forEach((name) => {
 	try {
-		const filePath = path.join(__dirname, "..", name, `${name}.html`);
+		const filePath = path.join(__dirname, "..", "src", name, `${name}.html`);
 		// console.log(filePath);
 		const fileContent = fs.readFileSync(filePath, {
 			encoding: "utf8",
@@ -29,7 +29,7 @@ names.forEach((name) => {
 		// newTemplateContent += `<script src="${name}.js"></script>`;
 		// console.log(newTemplateContent);
 
-		const target = path.join(__dirname, "../..", "build", "sit", "html");
+		const target = path.join(__dirname, "../", "build", "sit", "html");
 
 		if (!fs.existsSync(target)) {
 			fs.mkdirSync(target, { recursive: true });
