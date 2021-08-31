@@ -23,8 +23,13 @@ names.forEach((name) => {
 			flag: "r",
 		});
 		let newTemplateContent = templateContent.replace(
-			/{{placeholder}}/gi,
+			/{{placeholder}}/i,
 			fileContent
+		);
+
+		newTemplateContent = newTemplateContent.replace(
+			/{{script.js}}/i,
+			`../js/${name}.js`
 		);
 		// newTemplateContent += `<script src="${name}.js"></script>`;
 		// console.log(newTemplateContent);

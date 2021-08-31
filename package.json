@@ -4,12 +4,10 @@
   "description": "NPM project which include basic html, css, js pre processors or compilers",
   "main": "index.js",
   "scripts": {
+    "build": "npm run clean:build && npm run prebuild:html && npm run webpack",
     "webpack": "webpack --config webpack.dev.js",
-    "build": "npm run clean:build && npm run prebuild:html && npm run prebuild:sit",
     "clean:build": "rm -rf build",
     "prebuild:html": "node prebuild-scripts/html-precompiler.js",
-    "prebuild:sit": "node-sass -r src/**/*.scss -o build/sit/css",
-    "prebuild:uat": "node-sass --watch src/**/*.scss -o build/uat/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

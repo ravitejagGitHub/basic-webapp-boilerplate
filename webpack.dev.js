@@ -6,8 +6,8 @@ module.exports = {
 		main: "./src/login/login.js",
 	},
 	output: {
-		filename: "main.js",
-		path: path.resolve(__dirname, "build", "css"),
+		filename: "login.js",
+		path: path.resolve(__dirname, "build", "js"),
 	},
 	module: {
 		rules: [
