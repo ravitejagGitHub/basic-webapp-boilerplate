@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const templateFile = "a2b2c-template.html";
+const templateFile = "template.html";
 
 const names = ["login", "reset-password"];
 
@@ -22,6 +22,7 @@ names.forEach((name) => {
 			encoding: "utf8",
 			flag: "r",
 		});
+
 		let newTemplateContent = templateContent.replace(
 			/{{placeholder}}/i,
 			fileContent
