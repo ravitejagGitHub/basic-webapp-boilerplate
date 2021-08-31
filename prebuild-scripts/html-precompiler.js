@@ -29,7 +29,7 @@ names.forEach((name) => {
 		// newTemplateContent += `<script src="${name}.js"></script>`;
 		// console.log(newTemplateContent);
 
-		const target = path.join(__dirname, "../", "build", "sit", "html");
+		const target = path.join(__dirname, "../", "build", "html");
 
 		if (!fs.existsSync(target)) {
 			fs.mkdirSync(target, { recursive: true });

@@ -4,6 +4,7 @@
   "description": "NPM project which include basic html, css, js pre processors or compilers",
   "main": "index.js",
   "scripts": {
+    "webpack": "webpack --config webpack.dev.js",
     "build": "npm run clean:build && npm run prebuild:html && npm run prebuild:sit",
     "clean:build": "rm -rf build",
     "prebuild:html": "node prebuild-scripts/html-precompiler.js",
@@ -22,6 +23,11 @@
   },
   "homepage": "https://github.com/ravitejagGitHub/basic-webapp-boilerplate#readme",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "css-loader": "^6.2.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
   }
 }
