@@ -3,10 +3,11 @@ const path = require("path");
 module.exports = {
 	mode: "development",
 	entry: {
-		main: "./src/login/login.js",
+		login: "./src/login/login.js",
+		"reset-password": "./src/reset-password/reset-password.js",
 	},
 	output: {
-		filename: "login.js",
+		filename: "[name].js",
 		path: path.resolve(__dirname, "build", "js"),
 	},
 	module: {

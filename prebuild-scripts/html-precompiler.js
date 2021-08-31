@@ -3,7 +3,7 @@ const path = require("path");
 
 const templateFile = "a2b2c-template.html";
 
-const names = ["login"];
+const names = ["login", "reset-password"];
 
 const filePath = path.join(__dirname, "..", "src", templateFile);
 // console.log(filePath);
