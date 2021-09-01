@@ -4,10 +4,10 @@ const path = require("path");
 module.exports = {
 	mode: "development",
 	entry: {
-		login: "./src/login/login.js",
-		"reset-password": "./src/reset-password/reset-password.js",
-		footer: "./src/footer/footer.js",
-		header: "./src/header/header.js",
+		login: "./src/widgets/login/login.js",
+		"reset-password": "./src/widgets/reset-password/reset-password.js",
+		footer: "./src/widgets/footer/footer.js",
+		header: "./src/widgets/header/header.js",
 	},
 	output: {
 		filename: "[name].js",

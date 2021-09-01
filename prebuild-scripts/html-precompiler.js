@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const templateFile = "template.html";
+const templateFile = "layout.html";
 
 const PAGES = ["login", "reset-password"];
 
 const HEADER = "header";
 const FOOTER = "footer";
 
-const filePath = path.join(__dirname, "..", "src", templateFile);
+const filePath = path.join(__dirname, "..", "src/layouts", templateFile);
 // console.log(filePath);
 
 const templateContent = fs.readFileSync(filePath, {
@@ -83,7 +83,13 @@ function replaceTemplate({
 }
 
 function getPageContent(PAGE) {
-	const filePath = path.join(__dirname, "..", "src", PAGE, `${PAGE}.html`);
+	const filePath = path.join(
+		__dirname,
+		"..",
+		"src/widgets",
+		PAGE,
+		`${PAGE}.html`
+	);
 
 	return fs.readFileSync(filePath, {
 		encoding: "utf8",
