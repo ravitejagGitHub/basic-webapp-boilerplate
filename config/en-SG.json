@@ -1,0 +1,22 @@
+{
+    "blobUrl": "..",
+    "widgetsBasepath": "./src/widgets",
+    "widgetRegistry": [
+        {
+            "widgetId": "login",
+            "path": "login/login.js"
+        },
+        {
+            "widgetId": "reset-password",
+            "path": "reset-password/reset-password.js"
+        },
+        {
+            "widgetId": "footer",
+            "path": "footer/footer.js"
+        },
+        {
+            "widgetId": "header",
+            "path": "header/header.js"
+        }
+    ]
+}
