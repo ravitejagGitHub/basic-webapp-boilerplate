@@ -1,17 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-const { getConfig } = require("./config.service");
+const { setConfig, getWidgets, getWidgetScript } = require("./widget.service");
 
 function getEntryConfig(configName) {
 	try {
 		let entryConfig = {};
 
-		const config = getConfig(configName);
-
-		config?.widgetRegistry?.forEach((widget) => {
-			entryConfig[widget.widgetId] = `${config.widgetsBasepath}/${widget.path}`;
+		setConfig(configName);
+		getWidgets()?.forEach((widget) => {
+			entryConfig[widget.widgetId] = getWidgetScript(widget);
 		});
-		// console.log(entryConfig);
+		console.log(entryConfig);
 		return entryConfig;
 	} catch (e) {
 		console.error(e);

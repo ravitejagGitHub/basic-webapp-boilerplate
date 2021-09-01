@@ -1,22 +1,49 @@
 {
     "blobUrl": "..",
-    "widgetsBasepath": "./src/widgets",
+    "layouts": [
+        {
+            "id": "layout",
+            "path": "layout.html",
+            "header": "header",
+            "footer": "footer"
+        }
+    ],
     "widgetRegistry": [
         {
             "widgetId": "login",
-            "path": "login/login.js"
+            "path": "login",
+            "moduleName": "LoginModule"
         },
         {
             "widgetId": "reset-password",
-            "path": "reset-password/reset-password.js"
+            "path": "reset-password",
+            "moduleName": "ResetPasswordModule"
         },
         {
             "widgetId": "footer",
-            "path": "footer/footer.js"
+            "path": "footer",
+            "moduleName": "FooterModule"
         },
         {
             "widgetId": "header",
-            "path": "header/header.js"
+            "path": "header",
+            "moduleName": "HeaderModule"
+        }
+    ],
+    "pages": [
+        {
+            "id": "login",
+            "name": "loginPage",
+            "layout": "layout",
+            "title": "Login",
+            "context": {}
+        },
+        {
+            "id": "reset-password",
+            "name": "resetPasswordPage",
+            "title": "Reset Password",
+            "layout": "layout",
+            "context": {}
         }
     ]
 }
