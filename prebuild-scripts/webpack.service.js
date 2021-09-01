@@ -1,20 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const { getConfig } = require("./config.service");
 
 function getEntryConfig(configName) {
 	try {
 		let entryConfig = {};
 
-		const filePath = path.join(__dirname, "..", "config", configName);
-		// console.log(filePath);
-
-		const config = JSON.parse(
-			fs.readFileSync(filePath, {
-				encoding: "utf8",
-				flag: "r",
-			})
-		);
-		// console.log(config);
+		const config = getConfig(configName);
 
 		config?.widgetRegistry?.forEach((widget) => {
 			entryConfig[widget.widgetId] = `${config.widgetsBasepath}/${widget.path}`;

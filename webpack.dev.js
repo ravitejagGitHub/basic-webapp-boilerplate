@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const { getEntryConfig } = require("./prebuild-scripts/generate-webpack-entry");
+const { getEntryConfig } = require("./prebuild-scripts/webpack.service");
 let entryConfig = getEntryConfig("en-SG.json");
 
 module.exports = {
