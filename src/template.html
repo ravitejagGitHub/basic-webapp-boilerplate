@@ -3,11 +3,15 @@
 <head>
     <title>My Product Brand Name</title>
     <link rel="stylesheet" href="{{style.css}}">
+    <link rel="stylesheet" href="{{header.css}}">
+    <link rel="stylesheet" href="{{footer.css}}">
 </head>
 <body>
 
     <div class="app">
-        <div class="header"></div>
+        <div class="app__header">
+            {{header}}
+        </div>
         <div class="content"> 
             <div class="content__app-details">
                     <div class="app__name">Basic Web App </div>
@@ -17,9 +21,13 @@
                 {{placeholder}}
             </div>
         </div>
-        <div class="footer"></div>
+        <div class="app__footers">
+            {{footer}}
+        </div>
     </div>
     <script src="{{script.js}}"></script>
+    <script src="{{header.js}}"></script>
+    <script src="{{footer.js}}"></script>
 
 </body>
 </html>

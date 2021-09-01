@@ -4,7 +4,7 @@
   "description": "NPM project which include basic html, css, js pre processors or compilers",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean:build && npm run prebuild:html && npm run webpack",
+    "prestart": "npm run clean:build && npm run prebuild:html && npm run webpack",
     "webpack": "webpack --config webpack.dev.js",
     "clean:build": "rm -rf build",
     "prebuild:html": "node prebuild-scripts/html-precompiler.js",

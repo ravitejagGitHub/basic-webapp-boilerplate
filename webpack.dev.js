@@ -6,6 +6,8 @@ module.exports = {
 	entry: {
 		login: "./src/login/login.js",
 		"reset-password": "./src/reset-password/reset-password.js",
+		footer: "./src/footer/footer.js",
+		header: "./src/header/header.js",
 	},
 	output: {
 		filename: "[name].js",

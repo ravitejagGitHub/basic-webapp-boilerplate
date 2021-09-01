@@ -12,20 +12,11 @@ body {
 
     @include body;
 
-    .header {
-        height: 100px;
-    }
     .content {
         display: flex;
         background-color: var(--secondary-color);
         flex-grow: 1;
-
     }
-    .footer {
-        height: 200px;
-        background-color: var(--dark-grey-color);
-    }
-
     &__name {
       @include header;
     }
